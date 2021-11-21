@@ -18,12 +18,7 @@ function App() {
 
 
   return <div className="App">
-
-  test01
-
-
-
-test2
+    
   </div>
 }
 
