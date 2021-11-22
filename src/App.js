@@ -5,11 +5,7 @@ import React, { useState, useEffect } from "react";
 function App() {
   const [coins, setCoins] = useState([]);
 
-<<<<<<< HEAD
-    branch volkan
 
-  </div>
-=======
   useEffect(() => {
     axios
       .get(
@@ -33,7 +29,6 @@ function App() {
       </div>
     </div>
   );
->>>>>>> 949ae7ebc6b21554089c9bc8b82a560eea6951fa
 }
 
 export default App;
