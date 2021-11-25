@@ -1,10 +1,16 @@
 import React from 'react'
+import { useCoin } from '../context/CoinContext'
 
 function Searchbar() {
-    // https://s2.coinmarketcap.com/static/cloud/img/fiat-flags/`${vs_currency}`.svg
+    const { searchInput, setSearchInput } = useCoin();
+
+    const changeHandler = (e) => {
+        setSearchInput(e.target.value)
+    }
+
     return (
         <div>
-            searchbar
+            <input onChange={changeHandler} value={searchInput} type="search" placeholder="search coin" className="border" />
         </div>
     )
 }
