@@ -10,11 +10,12 @@ function CoinList({
   priceChange
 }) {
   return (
+  
     <div className="coin-container flex justify-center">
       <div className="coin-row flex flex-row justify-start items-center">
         <div className="coin flex items-center">
-          <img className="h-10" src={image} alt="crypto" />
-          <h1 className="pr-10">{name}</h1>
+          <img className="h-3" src={image} alt="crypto" />
+          <h1 >{name}</h1>
           <p className="coin-symbol pr-20">({symbol})</p>
         </div>
         <div className="coin-data flex justify-between w-full">
@@ -29,10 +30,12 @@ function CoinList({
           <p className='coin-marketcap'>
             Market Cap: ${marketcap.toLocaleString()}
           </p>
-
+          
         </div>
       </div>
+      
     </div>
+ 
   )
 }
 

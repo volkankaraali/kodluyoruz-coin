@@ -1,14 +1,18 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Searchbar from "./components/Searchbar";
+import Pagination from "./components/Pagination";
 
 
 function App() {
+  const [counter, setCounter] = useState(1)
 
   return (
-    <div className="bg-gray-500">
+    <div>
 
-      <Searchbar />
+      <Searchbar counter={counter} setCounter={setCounter} />
+      <Pagination counter={counter} setCounter={setCounter} />
+      
     </div>
   );
 }
