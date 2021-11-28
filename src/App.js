@@ -1,24 +1,19 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
+import Searchbar from "./components/Searchbar";
+import Pagination from "./components/Pagination";
 
-import Home from "./components/Home";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Detail from "./components/Detail";
-import { CoinProvider } from "./context/CoinContext";
 
 function App() {
+  const [counter, setCounter] = useState(1)
 
   return (
-    <CoinProvider>
-      <Router>
+    <div>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/detail/:id" element={<Detail />} />
-        </Routes>
-      </Router>
-    </CoinProvider>
-
+      <Searchbar counter={counter} setCounter={setCounter} />
+      <Pagination counter={counter} setCounter={setCounter} />
+      
+    </div>
   );
 }
 
