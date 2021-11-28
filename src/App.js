@@ -6,8 +6,10 @@ import Searchbar from "./components/Searchbar";
 function App() {
 
   return (
+    <div className="bg-gray-500">
 
-    <Searchbar />
+      <Searchbar />
+    </div>
   );
 }
 
